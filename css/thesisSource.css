@@ -1,0 +1,17 @@
+.thesis__soure-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.33rem;
+}
+
+.thesis__soure-item {
+    color: #fff;
+    list-style: none;
+    padding: 1.5rem 3rem;
+    border-radius: 3px;
+    font-weight: 500;
+    text-align: center;
+    background: #E39F18;
+    background: linear-gradient(180deg, rgba(227, 159, 24, 1) 0%, rgba(125, 88, 13, 1) 100%);
+}

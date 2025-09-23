@@ -1,0 +1,47 @@
+ /* Filter Button */
+    .searchbar__filter {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      font-size: 22px;
+    }
+
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown menu */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 0px;
+      left: 50px;
+      background-color: #0d1b66;
+      min-width: 200px;
+      border-radius: 5px;
+      overflow: hidden;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    /* Dropdown items */
+    .dropdown-menu a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.2s;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #1A2368;
+    }
+
+    /* Highlighted "ALL" option */
+    .dropdown-menu a.all {
+      background: #FFD700;
+      color: black;
+      font-weight: bold;
+    }

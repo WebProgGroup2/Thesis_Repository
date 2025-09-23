@@ -1,0 +1,79 @@
+/* ===== Picture-frame carousel ===== */
+
+/* Viewport container (rounded rectangle) */
+.carousel {
+    width: 100%;
+    /* adjust to fit your layout */
+    max-width: 1620px;
+    height: 500px;
+    /* rectangle shape */
+    margin: 1.5rem auto;
+    /* rounded edges */
+    overflow: hidden;
+    padding: 12px;
+}
+
+/* Track contains two copies of slides (we clone with JS) and scrolls right */
+.carousel__track {
+    display: flex;
+    gap: 1rem;
+    animation: scroll var(--duration) linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        /* Move only the width of the original slides, not the clones */
+        transform: translateX(-50%);
+    }
+}
+
+
+/* One picture-frame (card) */
+.carousel__item {
+    flex: 0 0 260px;
+    /* fixed frame width */
+    height: 100%;
+    width: 100%;
+    min-width: 800px;
+    /* border-radius: 5px; */
+    /* rounded frame */
+    /* background: #fff; */
+    /* frame inner background */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18); */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 8px solid #fff; */
+    /* frame border (like a mat) */
+}
+
+/* Frame image covers whole card */
+.carousel__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Animation: move the track from -50% to 0 (this makes it appear to move right) */
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Optional: slow down on hover for inspection */
+.carousel:hover .carousel__track {
+    animation-play-state: paused;
+}
