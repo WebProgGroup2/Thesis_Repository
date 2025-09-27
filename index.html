@@ -31,13 +31,7 @@
                         <span class="material-symbols-outlined">menu_book</span>
                         Programs
                     </h2>
-                    <ul class="sidebar__list sidebar__list--courses">
-                        <li class="sidebar__list-item"> <input type="checkbox">BSCS</li>
-                        <li class="sidebar__list-item"> <input type="checkbox">BSP</li>
-                        <li class="sidebar__list-item"> <input type="checkbox">BSA</li>
-                        <li class="sidebar__list-item"> <input type="checkbox">BSCE</li>
-                        <li class="sidebar__list-item"> <input type="checkbox">MMA</li>
-                    </ul>
+                    <ul id="programsList" class="sidebar__list sidebar__list--courses"></ul>
                 </div>
 
                 <div class="separator"></div>
@@ -47,11 +41,7 @@
                         <span class="material-symbols-outlined">topic</span>
                         Methodology
                     </h2>
-                    <ul class="sidebar__list sidebar__list--topics">
-                        <li class="sidebar__list-item"><input type="checkbox">Quantitative</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Qualitative</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Mixed Methodology</li>
-                    </ul>
+                    <ul id="methodologyList" class="sidebar__list sidebar__list--topics"></ul>
                 </div>
 
                 <div class="separator"></div>
@@ -61,14 +51,7 @@
                         <span class="material-symbols-outlined">lightbulb</span>
                         Thesis Type
                     </h2>
-                    <ul class="sidebar__list sidebar__list--topics">
-                        <li class="sidebar__list-item"><input type="checkbox">Experimental</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Correlational</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Case Study</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Survey</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Action Research</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Ethnographic</li>
-                    </ul>
+                    <ul id="thesisList" class="sidebar__list sidebar__list--topics"></ul>
                 </div>
 
                 <div class="separator"></div>
@@ -200,6 +183,7 @@
     </div>
     <script src="js/filter.js"></script>
     <script src="js/carousel.js"></script>
+    <script src="js/checkbox.js"></script>
 </body>
 
 </html>

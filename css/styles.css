@@ -92,7 +92,6 @@ input[type="checkbox"] {
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     flex: 1;
     /* fills remaining space */
     background: #fff;

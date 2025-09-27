@@ -32,13 +32,7 @@
                         <span class="material-symbols-outlined">menu_book</span>
                         Programs
                     </h2>
-                    <ul class="sidebar__list sidebar__list--courses">
-                        <li class="sidebar__list-item"> <input type="checkbox">BSCS</li>
-                        <li class="sidebar__list-item"> <input type="checkbox">BSP</li>
-                        <li class="sidebar__list-item"> <input type="checkbox">BSA</li>
-                        <li class="sidebar__list-item"> <input type="checkbox">BSCE</li>
-                        <li class="sidebar__list-item"> <input type="checkbox">MMA</li>
-                    </ul>
+                    <ul id="programsList" class="sidebar__list sidebar__list--courses"></ul>
                 </div>
 
                 <div class="separator"></div>
@@ -48,11 +42,7 @@
                         <span class="material-symbols-outlined">topic</span>
                         Methodology
                     </h2>
-                    <ul class="sidebar__list sidebar__list--topics">
-                        <li class="sidebar__list-item"><input type="checkbox">Quantitative</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Qualitative</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Mixed Methodology</li>
-                    </ul>
+                    <ul id="methodologyList" class="sidebar__list sidebar__list--topics"></ul>
                 </div>
 
                 <div class="separator"></div>
@@ -62,14 +52,7 @@
                         <span class="material-symbols-outlined">lightbulb</span>
                         Thesis Type
                     </h2>
-                    <ul class="sidebar__list sidebar__list--topics">
-                        <li class="sidebar__list-item"><input type="checkbox">Experimental</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Correlational</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Case Study</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Survey</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Action Research</li>
-                        <li class="sidebar__list-item"><input type="checkbox">Ethnographic</li>
-                    </ul>
+                    <ul id="thesisList" class="sidebar__list sidebar__list--topics"></ul>
                 </div>
 
                 <div class="separator"></div>
@@ -156,17 +139,7 @@
 
                             <div class="thesis__title">INSERT THESIS TITLE</div>
                             <div class="thesis__author">AUTHOR, CO AUTHOR</div>
-                            <div class="thesis__shortdesc">THESIS SHORT DESCRIPTION - Lorem Ipsum is simply dummy text
-                                of
-                                the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                                dummy
-                                text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                                it to
-                                make a type specimen book. It has survived not only five centuries, but also the leap
-                                into
-                                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                with the release of Letraset sheets. Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit.</div>
+                            <div class="thesis__shortdesc">PUBCLICATION DATE</div>
                         </div>
                     </div>
 
@@ -184,47 +157,30 @@
                             <!-- Sidebar -->
                             <div class="thesis__sidebar">
                                 <div class="thesis__description">
-                                    <h1 class="thesis__description-title">FULL DESCRIPTION</h1>
+                                    <h1 class="thesis__description-title">ABSTRACT
+                                    </h1>
                                     <p class="thesis__description-text">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex
-                                        sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis
-                                        convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
-                                        lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer
-                                        nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora
-                                        torquent per conubia nostra inceptos himenaeos.
-
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex
-                                        sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis
-                                        convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
-                                        lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer
-                                        nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora
-                                        torquent per conubia nostra inceptos himenaeos.
-
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex
-                                        sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis
-                                        convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
-                                        lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer
-                                        nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora
-                                        torquent per conubia nostra inceptos himenaeos.
-
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex
-                                        sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis
-                                        convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
-                                        lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer
-                                        nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora
-                                        torquent per conubia nostra inceptos himenaeos.
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries,but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with the release of Letraset sheets.
                                     </p>
                                 </div>
                                 <div class="thesis__sidebar-content">
-                                    <p class="thesis__sidebar-info"><span class="thesis__sidebar-title">Editors:</span>
-                                        H.
-                                        ELLO</p>
-                                    <p class="thesis__sidebar-info"><span class="thesis__sidebar-title">Date of
-                                            Publication:</span> 01/01/0111</p>
+                                    <p class="thesis__sidebar-info"><span class="thesis__sidebar-title">AUTHORS &
+                                            Co-authors</span>
+                                        Author number 1 </p>
+                                    <p>Author number 2</p>
+                                    <p>Author number 3</p>
+                                    <p>Author number 4</p>
+                                    <p class="thesis__sidebar-info"><span class="thesis__sidebar-title">Place of
+                                            Publication</span> NU Laguna</p>
                                     <p class="thesis__sidebar-info"><span
-                                            class="thesis__sidebar-title">References:</span>
+                                            class="thesis__sidebar-title">References</span>
                                     </p>
-                                    <p class="thesis__references">H. pol, A. pple, B. anana</p>
+                                    <p class="thesis__references">H. pol, A .pple, B. anana</p>
                                 </div>
                             </div>
                         </div>
@@ -238,6 +194,7 @@
 
         <script src="js/filter.js"></script>
         <script src="js/rate.js"></script>
+        <script src="js/checkbox.js"></script>
 </body>
 
 </html>
