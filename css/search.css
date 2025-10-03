@@ -1,0 +1,99 @@
+#cardWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 20px; /* spacing between cards */
+  justify-content: center; /* keep centered */
+  margin: 2rem auto; /* spacing from other elements */
+  max-width: 1100px; /* keeps it from stretching too wide */
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    background: #ffffff;
+    /* border: 2px solid red; */
+    border-radius: 12px;
+    width: 500px;
+    box-shadow: 0 4px 12px rgba(0,0,0,1);
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem; /* extra left padding for badge */
+    margin: 1.5rem 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    margin-left: 7rem;
+    /* margin-bottom: 40rem; */
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Badge positioned to the side */
+.badge {
+    position: absolute;
+    top: 16px;
+    left: -40px; /* moves it outside the card */
+    background: #1a2b8d;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Content */
+.card-content {
+    flex: 1;
+}
+
+.card-content .title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.card-content .authors {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: .5rem;
+}
+
+.card-content .abstract {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+#searchResults {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.page-btn {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #1a2b8d;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.page-btn:hover {
+  background: #0d1a5c;
+}
+
+.page-btn.active {
+  background: #ffcc00;
+  color: black;
+  font-weight: bold;
+}
