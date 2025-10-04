@@ -1,8 +1,9 @@
 .thesis__soure-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 3.33rem;
+    padding: 0;
+   
 }
 
 .thesis__soure-item {

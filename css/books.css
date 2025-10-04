@@ -6,6 +6,8 @@
     display: flex;
     gap: 29rem;
     align-items: center;
+    position: relative;
+    right: 70px;
 
 }
 
@@ -18,7 +20,7 @@
     margin-top: 4rem;
     box-shadow: -5px 4px 22px 9px rgba(66, 68, 90, 1);
     position: absolute;
-    left: 50px;
+    left: 0;
     width: 90%;
 }
 
@@ -31,7 +33,7 @@
     position: absolute;
     z-index: 1;
     top: 0;
-    left: 220px;
+    left: 150px;
 }
 
 

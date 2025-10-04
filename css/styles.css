@@ -6,9 +6,17 @@
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    /* prevents unwanted horizontal scroll */
+}
+
 body {
     font-family: "Roboto", sans-serif;
-    margin: 0;
     height: 100vh;
 }
 
@@ -52,17 +60,6 @@ input[type="checkbox"] {
     margin-right: 8px;
 }
 
-/* .sidebar__content li:hover {
-    color: red;
-    text-decoration: underline;
-} */
-
-/* === Layout === */
-.layout {
-    display: flex;
-    min-height: 100vh;
-}
-
 .sidebar {
     height: 100vh;
     z-index: 1;
@@ -72,7 +69,7 @@ input[type="checkbox"] {
     width: 320px;
     position: fixed;
     top: 0;
-    left:0;
+    left: 0;
     overflow-y: auto;
     padding: 1rem;
     background: linear-gradient(90deg,
@@ -82,8 +79,17 @@ input[type="checkbox"] {
 }
 
 .main {
-    margin-left: 250px;
-    /* push content so it’s not hidden under sidebar */
+    margin-left: 320px;
+    /* match sidebar width to avoid overlap */
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* keep content inside */
+    background: #fff;
+    background-image: url("/assets/NU Laguna BG.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* ensure no overflow from image */
 }
 
 .main {
@@ -100,6 +106,12 @@ input[type="checkbox"] {
 
 .main-body {
     padding: 2rem;
+}
+
+.main--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Sidebar sections */
@@ -235,23 +247,26 @@ input[type="checkbox"] {
     font-size: 18px;
 }
 
+/* Footer */
 .footer__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-right: 2rem;
+    border-right: 1px solid white;
 }
 
-/* Footer */
 .footer__section {
     display: flex;
     justify-content: center;
-    gap: 24rem;
+    gap: 3rem;
     margin-bottom: 2rem;
 }
 
 .footer__nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 3rem;
     align-items: center;
     padding-left: 0;
     margin-top: 2rem;
@@ -312,4 +327,59 @@ input[type="checkbox"] {
     color: white;
     background: #1A2368;
     background: linear-gradient(50deg, rgba(26, 35, 104, 1) 0%, rgba(45, 57, 138, 1) 50%, rgba(26, 35, 104, 1) 100%);
+}
+
+
+body {
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    /* scales text between 0.9rem and 1.1rem depending on width */
+}
+
+.main-body {
+    padding: clamp(1rem, 2vw, 2rem);
+    /* padding shrinks on smaller desktops */
+}
+
+
+.carousel {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.footer {
+    width: 100%;
+    padding: clamp(1rem, 2vw, 2rem);
+}
+
+.footer__section,
+.footer__nav {
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2vw, 3rem);
+}
+
+.footer__branding-name {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.footer__branding-tagline,
+.footer__developers {
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+}
+
+.sidebar {
+    width: clamp(250px, 20vw, 320px);
+}
+
+.main {
+    margin-left: clamp(250px, 20vw, 320px);
+
 }

@@ -86,54 +86,56 @@
             </div>
         </div>
 
-        <main class="main">
-            <div class="main-body">
-                <div class="searchbar">
-                    <form class="searchbar__form" action="#" method="get">
-                        <input type="text" class="searchbar__input" placeholder="Search here" name="q">
-                        <button type="submit" class="searchbar__button">SEARCH</button>
-                    </form>
-                    <div class="dropdown">
-                        <button class="searchbar__filter" title="Filter">
-                            <span class="searchbar__filter-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                                    viewBox="0 -960 960 960" width="24px" fill="#000000">
-                                    <path
-                                        d="M440-160q-17 0-28.5-11.5T400-200v-240L168-736q-15-20-4.5-42t36.5-22h560q26 0 36.5 22t-4.5 42L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-308 198-252H282l198 252Zm0 0Z" />
-                                </svg></span>
-                        </button>
-                        <!-- Dropdown Menu -->
-                        <div class="dropdown-menu">
-                            <a href="#" class="all">ALL</a>
-                            <a href="#">Title</a>
-                            <a href="#">Author</a>
-                            <a href="#">Keywords</a>
-                            <a href="#">Advance</a>
+        <main class="main main--content">
+            <div>
+                <div class="main-body">
+                    <div class="searchbar">
+                        <form class="searchbar__form" action="#" method="get">
+                            <input type="text" class="searchbar__input" placeholder="Search here" name="q">
+                            <button type="submit" class="searchbar__button">SEARCH</button>
+                        </form>
+                        <div class="dropdown">
+                            <button class="searchbar__filter" title="Filter">
+                                <span class="searchbar__filter-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                        height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                        <path
+                                            d="M440-160q-17 0-28.5-11.5T400-200v-240L168-736q-15-20-4.5-42t36.5-22h560q26 0 36.5 22t-4.5 42L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-308 198-252H282l198 252Zm0 0Z" />
+                                    </svg></span>
+                            </button>
+                            <!-- Dropdown Menu -->
+                            <div class="dropdown-menu">
+                                <a href="#" class="all">ALL</a>
+                                <a href="#">Title</a>
+                                <a href="#">Author</a>
+                                <a href="#">Keywords</a>
+                                <a href="#">Advance</a>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="separator"></div>
+                </div>
+
+                <!-- ===== Picture-frame Carousel (place this in .main-body above the footer) ===== -->
+                <div class="carousel" aria-label="Advertisement carousel — looping right to left">
+                    <div class="carousel__track">
+                        <!-- Each .carousel__item is a framed picture. Replace src with your images -->
+                        <div class="carousel__item"><img src="assets/image 6.png" alt="Slide 1"></div>
+                        <div class="carousel__item"><img src="assets/image 6.png" alt="Slide 2"></div>
+                        <div class="carousel__item"><img src="assets/image 6.png" alt="Slide 3"></div>
+                        <div class="carousel__item"><img src="assets/image 6.png" alt="Slide 4"></div>
+                        <!-- add more items as needed -->
                     </div>
                 </div>
 
-                <div class="separator"></div>
-            </div>
-
-            <!-- ===== Picture-frame Carousel (place this in .main-body above the footer) ===== -->
-            <div class="carousel" aria-label="Advertisement carousel — looping right to left">
-                <div class="carousel__track">
-                    <!-- Each .carousel__item is a framed picture. Replace src with preferred images -->
-                    <div class="carousel__item"><img src="assets/image 6.png" alt="Slide 1"></div>
-                    <div class="carousel__item"><img src="assets/image 6.png" alt="Slide 2"></div>
-                    <div class="carousel__item"><img src="assets/image 6.png" alt="Slide 3"></div>
-                    <div class="carousel__item"><img src="assets/image 6.png" alt="Slide 4"></div>
-                    <!-- add more items as needed -->
-                </div>
-            </div>
-
-            <div class="thesis__source">
-                <div class="thesis__source-content">
-                    <ul class="thesis__soure-list">
-                        <li class="thesis__soure-item">REPORT A E-RESOURCE PROBLEM</li>
-                        <li class="thesis__soure-item">REQUEST FOR ASSISTANCE</li>
-                        <li class="thesis__soure-item">ABOUT THESIS REPOSITORY</li>
-                    </ul>
+                <div class="thesis__source">
+                    <div class="thesis__source-content">
+                        <ul class="thesis__soure-list">
+                            <li class="thesis__soure-item">REPORT A E-RESOURCE PROBLEM</li>
+                            <li class="thesis__soure-item">REQUEST FOR ASSISTANCE</li>
+                            <li class="thesis__soure-item">ABOUT THESIS REPOSITORY</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
