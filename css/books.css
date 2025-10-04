@@ -4,7 +4,6 @@
 
 .thesis__header {
     display: flex;
-    margin-left: 2rem;
     gap: 29rem;
     align-items: center;
 
@@ -14,17 +13,13 @@
     display: flex;
     flex-direction: column;
     background-color: #f9f9f9;
-    padding: 5rem 6rem 5rem 4rem;
-    border-radius: 8px;
+    padding: 2.5rem 6rem 5rem 4rem;
+    border-top-right-radius: 10px;
     margin-top: 4rem;
-    margin-left: auto;
-    margin-right: auto;
     box-shadow: -5px 4px 22px 9px rgba(66, 68, 90, 1);
     position: absolute;
-    /* right: 100px; */
-    left: 0;
-    width: 100%;
-    max-width: 1500px;
+    left: 50px;
+    width: 90%;
 }
 
 .thesis__cover {
@@ -36,19 +31,33 @@
     position: absolute;
     z-index: 1;
     top: 0;
-    left: 285px;
+    left: 220px;
 }
 
 
 .thesis__info {
+    position: relative;
     display: flex;
-    justify-content: flex-end;
-    max-width: 1100px;
+    padding-left: 12rem;
+    margin: 0 auto;
 }
 
-.thesis__description{
-    width: 77ch;
+.thesis__description {
     margin-top: 5rem;
+}
+
+.thesis__description-text {
+    padding-bottom: 3.33rem;
+    border-bottom: 1px solid black;
+    width: 60ch;
+}
+
+.methodology__description-text, .thesis__type__description-text, .keywords__description-text {
+    margin: 0;
+}
+
+.methodology__title, .thesis__type-title, .keywords__title {
+    margin-bottom: .7rem;
 }
 
 .thesis__actions {
@@ -58,20 +67,21 @@
 
 .thesis__sidebar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
 }
 
 .thesis__sidebar-title {
     font-weight: bold;
     display: inline-block;
-    margin-top: 2rem;
     margin-bottom: 0.6rem;
+    margin-top: 2rem;
 }
 
 .thesis__sidebar-info {
     display: flex;
     flex-direction: column;
+    margin-top: 0;
 
 }
 
@@ -84,8 +94,13 @@
     font-weight: bold;
 }
 
+.thesis__sidebar-content {
+    position: relative;
+    bottom: 72px;
+}
+
 .thesis__btn--primary {
-    background-color: #1a1a1a;
+    background-color: #1A2368;
     color: white;
     margin-right: 2rem;
     padding: 1rem 2rem;
@@ -134,7 +149,7 @@
     font-size: 13px;
     color: #777;
     margin-bottom: 12px;
-    width: 70ch;
+    width: 33ch;
 }
 
 .thesis__heading {
@@ -165,4 +180,19 @@
     font-size: 16px;
     text-align: center;
     font-weight: bold;
+}
+
+.page__count {
+    border-top-left-radius: 20px;
+    padding: 1rem 2rem;
+    background-color: #f4c150;
+    position: absolute;
+    bottom: 50px;
+    right:0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.count{
+    font-weight: normal;
 }
