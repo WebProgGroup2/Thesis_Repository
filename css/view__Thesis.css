@@ -65,7 +65,7 @@
 
 /* Wrap the table in a scrollable container */
 .thesis-list__table-wrapper {
-    max-height: 400px;
+    max-height: 600px;
     /* adjust as needed */
     overflow-y: auto;
     /* vertical scroll */
