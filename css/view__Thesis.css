@@ -1,0 +1,105 @@
+/* --- Block: thesis-list --- */
+.thesis-list {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.thesis-list__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.thesis-list__title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.thesis-list__add-btn {
+    background-color: #1e2b6e;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.thesis-list__add-btn:hover {
+    background-color: #2e3d8b;
+}
+
+/* --- Block: thesis-table --- */
+.thesis-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: auto;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+}
+
+.thesis-table__head {
+    background-color: #1e2b6e;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    /* keeps header above table rows */
+}
+
+.thesis-table__row--head .thesis-table__cell--head {
+    padding: 20px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.thesis-table__body .thesis-table__row:nth-child(even) {
+    background-color: hsla(233, 59%, 26%, 0.28);
+}
+
+
+.thesis-table__cell {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Wrap the table in a scrollable container */
+.thesis-list__table-wrapper {
+    max-height: 400px;
+    /* adjust as needed */
+    overflow-y: auto;
+    /* vertical scroll */
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+}
+
+
+/* --- Element: Action Buttons --- */
+.thesis-table__actions {
+    display: flex;
+    gap: 10px;
+}
+
+.thesis-table__button {
+    border: none;
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: white;
+}
+
+.thesis-table__button--edit {
+    background-color: #d9534f;
+}
+
+.thesis-table__button--view {
+    background-color: #5cb85c;
+}
+
+.thesis-table__button--edit:hover {
+    background-color: #c9302c;
+}
+
+.thesis-table__button--view:hover {
+    background-color: #449d44;
+}

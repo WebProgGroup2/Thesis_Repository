@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normzalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/thesisSource.css">
+    <link rel="stylesheet" href="css/dropdownMenu.css">
+    <link rel="stylesheet" href="css/view__Thesis.css">
+    <link rel="stylesheet" href="css/books.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="sidebar__content">
+
+                <a href="/Thesis_Repository/index.html">
+                    <div class="sidebar__logo">
+                        <img class="sidebar__logo-image" src="assets/LRC Logo.png" alt="LRC Logo">
+                        <div class="sidebar__logo-heading">
+                            <h1 class="sidebar__logo-title">LRC THESIS</h1>
+                            <h1 class="sidebar__logo-subtitle">REPOSITORY</h1>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="sidebar__section sidebar__section--courses">
+                    <h2 class="sidebar__section-title">
+                        <span class="material-symbols-outlined">menu_book</span>
+                        Programs
+                    </h2>
+                    <ul id="programsList" class="sidebar__list sidebar__list--courses"></ul>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="sidebar__section sidebar__section--topics">
+                    <h2 class="sidebar__section-title">
+                        <span class="material-symbols-outlined">topic</span>
+                        Methodology
+                    </h2>
+                    <ul id="methodologyList" class="sidebar__list sidebar__list--topics"></ul>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="sidebar__section sidebar__section--topics">
+                    <h2 class="sidebar__section-title">
+                        <span class="material-symbols-outlined">lightbulb</span>
+                        Thesis Type
+                    </h2>
+                    <ul id="thesisList" class="sidebar__list sidebar__list--topics"></ul>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="sidebar__section sidebar__section--add-thesis">
+                    <h2 class="sidebar__section-title">
+                        <span class="material-symbols-outlined">library_add</span>
+                        Add Thesis
+                    </h2>
+                    <ul class="sidebar__list sidebar__list--add-thesis">
+                        <li class="sidebar__list-item add__module">Archive Module</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="sidebar__section sidebar__section--social">
+                <ul class="sidebar__list sidebar__list--social">
+                    <li class="sidebar__list-item">
+                        <img class="sidebar__social-icon" src="assets/Instagram.png" alt="Instagram">
+                    </li>
+                    <li class="sidebar__list-item">
+                        <img class="sidebar__social-icon" src="assets/Facebook.png" alt="Facebook">
+                    </li>
+                    <li class="sidebar__list-item">
+                        <img class="sidebar__social-icon" src="assets/LinkedIn.png" alt="LinkedIn">
+                    </li>
+                    <li class="sidebar__list-item">
+                        <img class="sidebar__social-icon" src="assets/Youtube.png" alt="Youtube">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <main class="main main--content">
+            <div>
+                <div class="main-body">
+                    <div class="searchbar">
+                        <form class="searchbar__form" action="#" method="get">
+                            <input type="text" class="searchbar__input" placeholder="Search here" name="q">
+                            <button type="submit" class="searchbar__button">SEARCH</button>
+                        </form>
+                        <div class="dropdown">
+                            <button class="searchbar__filter" title="Filter">
+                                <span class="searchbar__filter-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                        height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                        <path
+                                            d="M440-160q-17 0-28.5-11.5T400-200v-240L168-736q-15-20-4.5-42t36.5-22h560q26 0 36.5 22t-4.5 42L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-308 198-252H282l198 252Zm0 0Z" />
+                                    </svg></span>
+                            </button>
+                            <!-- Dropdown Menu -->
+                            <div class="dropdown-menu">
+                                <a href="#" class="all">ALL</a>
+                                <a href="#">Title</a>
+                                <a href="#">Author</a>
+                                <a href="#">Keywords</a>
+                                <a href="#">Advance</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="separator"></div>
+                </div>
+                <div>
+                    <div class="thesis-list">
+                        <div class="thesis-list__header">
+                            <h2 class="thesis-list__title">List of Current Thesis Available</h2>
+                            <button class="thesis-list__add-btn">ADD</button>
+                        </div>
+                        <div class="thesis-list__table-wrapper">
+                            <table class="thesis-table">
+                                <thead class="thesis-table__head">
+                                    <tr class="thesis-table__row thesis-table__row--head">
+                                        <th class="thesis-table__cell thesis-table__cell--head">Title</th>
+                                        <th class="thesis-table__cell thesis-table__cell--head">Author</th>
+                                        <th class="thesis-table__cell thesis-table__cell--head">Publication Date</th>
+                                        <th class="thesis-table__cell thesis-table__cell--head">Publication Place</th>
+                                        <th class="thesis-table__cell thesis-table__cell--head">Methodology</th>
+                                        <th class="thesis-table__cell thesis-table__cell--head">Action Buttons</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="thesis-table__body" id="thesis-table-body">
+                                    <!-- Rows populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="footer">
+                <div class="footer__section">
+                    <div class="footer__info">
+                        <h2 class="footer__title">NU LAGUNA LRC</h2>
+                        <p class="footer__text">Open Time: 8 am - 8pm</p>
+                        <p class="footer__text">nulagunalrc@gmail.com</p>
+                        <p class="footer__text">0929222123456</p>
+                    </div>
+
+                    <div class="footer__branding">
+                        <div class="NU__info">
+                            <img src="assets/NU-Logo.png" alt="NU Logo" class="footer__logo">
+                            <img src="assets/125 anniversary.png" alt="NU Anniversary Logo" class="footer__logo">
+                            <div class="footer__NU-branding">
+                                <h1 class="footer__branding-name">NATIONAL UNIVERSITY</h1>
+                                <h2 class="footer__branding-tagline">EDUCATION THAT WORKS | FOUNDER FOR FILIPINOS, BUILT
+                                    FOR
+                                    NATION</h2>
+                            </div>
+                        </div>
+                        <div class="developers">
+                            <p class="footer__developers">
+                                Developers: Arestado Ted Carlo - Calara Christian - Manalo Caleb Hope - Moises Paule -
+                                Chelsea
+                                Perez
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="separator separator--white"></div>
+
+                <div class="footer__bottom">
+                    <ul class="footer__nav">
+                        <li class="footer__nav-item">Contact</li>
+                        <li class="footer__nav-item">Terms & Conditions</li>
+                        <li class="footer__nav-item">Privacy Policy</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+</html>
+
+
+<script src="js/filter.js"></script>
+<script src="js/rate.js"></script>
+<script src="js/checkbox.js"></script>
+<script src="js/view__Thesis.js"></script>

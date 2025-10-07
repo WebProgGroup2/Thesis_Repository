@@ -283,6 +283,9 @@ input[type="checkbox"] {
 }
 
 /* Footer */
+.footer{
+    margin-top: 4rem;
+}
 .footer__info {
     display: flex;
     flex-direction: column;
