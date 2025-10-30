@@ -1,0 +1,131 @@
+#footer {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #1a2368 0%, #2d398a 36%, #1a2368 97%);
+  display: grid;
+  grid-template-rows: 80% 20%;
+  position: relative;
+
+  #upper-section {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    position: relative;
+
+    #left-side {
+      position: relative;
+      color: var(--color-surface);
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      gap: 1em;
+
+      .lrc-info {
+        width: 100%;
+        padding-left: 3em;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+
+        &:nth-child(1) {
+          font-weight: 600;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 25%; /* Start the line 25% from the top */
+        height: 50%; /* Line covers 50% of the element’s height */
+        width: 1px;
+        background-color: var(--color-accent);
+      }
+    }
+
+    #right-side {
+      padding: 1em;
+      display: grid;
+      grid-template-columns: 100px 100px 1fr;
+      gap: 0.5em;
+
+      .logo-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 100px;
+        }
+      }
+
+      #nu-slogan {
+        display: grid;
+        grid-template-rows: 60% 40%;
+
+        #school-name {
+          font-size: 2em;
+          color: var(--color-surface);
+          font-weight: bolder;
+          display: flex;
+          align-items: end;
+        }
+
+        #school-motto {
+          font-size: 1em;
+          color: var(--color-surface);
+          display: grid;
+          grid-template-columns: auto 5% 1fr;
+          padding-top: 8px;
+
+          #line {
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              right: 50%;
+              transform: translateX(50%);
+              height: 50%; /* Line covers 50% of the element’s height */
+              width: 1px;
+              background-color: var(--color-accent);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #lower-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    a {
+      text-decoration: none;
+      color: var(--color-surface);
+      font-weight: 600;
+      width: 15%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      left: 50%;
+      height: 1px;
+      width: 90%;
+      transform: translateX(-50%);
+      background-color: var(--color-accent);
+    }
+  }
+}

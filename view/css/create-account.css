@@ -1,0 +1,213 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../assets/NU_Laguna_BG.png");
+  background-size: cover;
+  position: relative;
+}
+body #back-btn-wrapper {
+  position: absolute;
+  top: 40px;
+  right: 50%;
+  height: 50px;
+  width: 150px;
+  transform: translateX(50%);
+}
+body #back-btn-wrapper #back-btn {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--color-accent);
+  color: var(--color-text-on-accent);
+  border: none;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+  font-weight: 600;
+}
+body #back-btn-wrapper #back-btn:hover {
+  background-color: var(--color-accent-light);
+  transform: translateY(-2px);
+}
+body #back-btn-wrapper #back-btn:active {
+  transform: scale(0.95);
+}
+body #form-wrapper {
+  height: 70%;
+  width: 70%;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 0 0 10px var(--color-primary);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+body #form-wrapper.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+body #form-wrapper #left-section {
+  border-radius: 8px 0 0 8px;
+  background-color: #fff;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+body #form-wrapper #left-section #illustration {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+body #form-wrapper #right-section {
+  border-radius: 0 8px 8px 0;
+  background-color: #fff;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  padding: 1em;
+  gap: 0.5em;
+  color: var(--color-primary);
+}
+body #form-wrapper #right-section .section-rows:nth-child(n+3) {
+  align-items: center;
+}
+body #form-wrapper #right-section #header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+body #form-wrapper #right-section #header #lrc-logo {
+  height: 50px;
+  aspect-ratio: 1/1;
+}
+body #form-wrapper #right-section #header #section-label {
+  font-size: 2em;
+  font-weight: bolder;
+  color: var(--color-accent);
+}
+body #form-wrapper #right-section #input-fields-wrapper {
+  display: grid;
+  grid-template-rows: 10% 1fr;
+  height: auto;
+  gap: 1em;
+}
+body #form-wrapper #right-section #input-fields-wrapper #form-label {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+}
+body #form-wrapper #right-section #input-fields-wrapper #input-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+body #form-wrapper #right-section #input-fields-wrapper #input-fields #personal-details {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5em;
+}
+body #form-wrapper #right-section #input-fields-wrapper #input-fields .text-fields {
+  height: 40px;
+  width: 100%;
+  background-color: rgba(33, 56, 189, 0.4); /* softer translucency */
+  border: 1px solid transparent;
+  padding: 10px 12px;
+  font-size: 1.1em;
+  color: var(--color-text-on-primary);
+  outline: none;
+  transition: all 0.25s ease;
+  /* Placeholder styling */
+}
+body #form-wrapper #right-section #input-fields-wrapper #input-fields .text-fields::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+body #form-wrapper #right-section #input-fields-wrapper #input-fields .text-fields {
+  /* Hover effect: slight glow + accent border */
+}
+body #form-wrapper #right-section #input-fields-wrapper #input-fields .text-fields:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 8px rgba(255, 211, 42, 0.4);
+  background-color: rgba(76, 92, 188, 0.35);
+}
+body #form-wrapper #right-section #input-fields-wrapper #input-fields .text-fields {
+  /* Focus effect: subtle blue glow and brighter text */
+}
+body #form-wrapper #right-section #input-fields-wrapper #input-fields .text-fields:focus {
+  border-color: var(--color-accent-light);
+  box-shadow: 0 0 12px rgba(255, 211, 42, 0.5);
+  background-color: rgba(76, 92, 188, 0.45);
+  color: #fff;
+}
+body #form-wrapper #selection-wrapper {
+  display: flex;
+}
+body #form-wrapper #selection-wrapper #role-selection {
+  width: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  padding: 8px;
+  cursor: pointer;
+}
+body #form-wrapper #btns-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 10% 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+body #form-wrapper #btns-wrapper span {
+  display: flex;
+  justify-content: center;
+}
+body #form-wrapper #btns-wrapper .btns {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px var(--color-shadow);
+  font-weight: 600;
+  /* Hover state */
+}
+body #form-wrapper #btns-wrapper .btns:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--color-shadow);
+}
+body #form-wrapper #btns-wrapper .btns {
+  /* Active (click) state */
+}
+body #form-wrapper #btns-wrapper .btns:active {
+  background-color: var(--color-primary-dark);
+  transform: translateY(0);
+  box-shadow: 0 1px 2px var(--color-shadow);
+}
+body #form-wrapper #btns-wrapper .btns {
+  /* Disabled state */
+}
+body #form-wrapper #btns-wrapper .btns:disabled {
+  background-color: var(--color-border);
+  color: var(--color-text-light);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+body #form-wrapper #btns-wrapper #sign-in-btn {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+body #form-wrapper #btns-wrapper #sign-in-btn:hover {
+  background-color: var(--color-accent-light);
+}
+
+/*# sourceMappingURL=create-account.css.map */

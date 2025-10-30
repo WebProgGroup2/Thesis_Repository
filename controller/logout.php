@@ -1,10 +1,16 @@
 <?php
-session_start();
+require_once 'my_cookies.php'; 
 
-// Destroy all session data
-session_unset();
+
+deleteMyCookie('first_name');
+deleteMyCookie('role');
+deleteMyCookie('school_id');
+
+
+session_start();
+$_SESSION = [];
 session_destroy();
 
-// Redirect to the login page
-header("Location: ../index.php");
+
+header("Location: " . $BASE_URL . "index.php");
 exit();

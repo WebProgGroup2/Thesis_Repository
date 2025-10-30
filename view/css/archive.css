@@ -1,0 +1,627 @@
+body .content-wrapper .main {
+  height: 100vh;
+  grid-template-rows: 80px calc(100vh - 80px);
+}
+body .content-wrapper .main #main-content {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 8% 92%;
+  overflow-y: hidden;
+  padding: 1em;
+  position: relative;
+}
+body .content-wrapper .main #main-content .main-header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 1em 0;
+}
+body .content-wrapper .main #main-content .main-header span {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #1a2068;
+}
+body .content-wrapper .main #main-content .main-header .modifier-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+body .content-wrapper .main #main-content .main-header .modifier-section button {
+  padding: 0.5em 1em;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  width: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .content-wrapper .main #main-content .main-header .modifier-section button:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+body .content-wrapper .main #main-content .main-header .modifier-section button:active {
+  transform: scale(0.95);
+}
+body .content-wrapper .main #main-content .main-header .modifier-section #add-btn {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+body .content-wrapper .main #main-content .main-header .modifier-section label {
+  font-size: 1em;
+  font-weight: 600;
+  color: #1a2068;
+}
+body .content-wrapper .main #main-content .main-header .modifier-section select {
+  height: 100%;
+  padding: 0.3em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  color: #1a2368;
+}
+body .content-wrapper .main #main-content .main-header .modifier-section select:focus {
+  outline: none;
+  border-color: #1a2068;
+  box-shadow: 0 0 5px rgba(26, 32, 104, 0.5);
+}
+body .content-wrapper .main #main-content .list-wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+body .content-wrapper .main #main-content .list-wrapper .list-header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
+  background-color: #1a2068;
+}
+body .content-wrapper .main #main-content .list-wrapper .list-header .header-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1em;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper:nth-child(even) {
+  background-color: rgba(40, 60, 150, 0.85);
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+  font-size: 0.8em;
+  background-color: rgba(27, 36, 106, 0.9); /* Deep royal blue */
+  color: #ffffff; /* Keep text readable */
+  transition: background-color 0.25s ease;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper .thesis-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper .btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2em;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper .btn-wrapper .interaction-btns {
+  padding: 0.3em 0.5em;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: all 0.3s ease;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper .btn-wrapper .interaction-btns:hover {
+  transform: scale(1.05);
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper .btn-wrapper .interaction-btns:active {
+  transform: scale(0.95);
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper .btn-wrapper .interaction-btns:nth-child(1) {
+  background-color: #198754;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper .btn-wrapper .interaction-btns:nth-child(1):hover {
+  background-color: #146c43;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper .btn-wrapper .interaction-btns:nth-child(2) {
+  background-color: #fd7e14;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper .btn-wrapper .interaction-btns:nth-child(2):hover {
+  background-color: #e96b0c;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper .btn-wrapper .interaction-btns:nth-child(3) {
+  background-color: #dc3545;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper .btn-wrapper .interaction-btns:nth-child(3):hover {
+  background-color: #a71d2a;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list .thesis-info-wrapper:hover {
+  background-color: rgba(65, 90, 200, 0.95); /* Lighter/brighter on hover */
+  transform: scale(1.01);
+  transition: background-color 0.25s ease, transform 0.15s ease;
+  cursor: pointer;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list {
+  /* For Chrome, Edge, and Safari */
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list::-webkit-scrollbar-track {
+  background: rgba(15, 20, 70, 0.3); /* subtle dark background */
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list::-webkit-scrollbar-thumb {
+  background-color: rgba(70, 90, 220, 0.8); /* your blue tone */
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+body .content-wrapper .main #main-content .list-wrapper .thesis-list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(120, 140, 255, 0.9); /* brighter blue on hover */
+}
+body .content-wrapper .main #main-content #pop-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+body .content-wrapper .main #main-content #pop-up.active {
+  opacity: 1;
+  visibility: visible;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form {
+  height: 90%;
+  width: 95%;
+  background-color: var(--color-bg);
+  border-radius: 8px;
+  cursor: default;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+  padding: 1em;
+  display: grid;
+  grid-template-rows: 10% 1fr;
+  align-items: center;
+  gap: 0.5em;
+  overflow: auto;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-header #purpose-label {
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-header #form-btns {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-header #form-btns #submit-thesis {
+  height: 80%;
+  border: none;
+  padding: 0 0.5em;
+  border-radius: 4px;
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-header #form-btns #submit-thesis:hover {
+  transform: scale(1.05);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-header #form-btns #submit-thesis:active {
+  transform: scale(0.95);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-header #form-btns #close-popup {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: rgb(221, 1, 1);
+  border: none;
+  border-radius: 4px;
+  color: var(--color-surface);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-header #form-btns #close-popup:hover {
+  transform: scale(1.05);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-header #form-btns #close-popup:active {
+  transform: scale(0.95);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 1em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form {
+  display: grid;
+  grid-template-rows: 80px 400px 80px repeat(2, auto) 80px 1fr;
+  gap: 0.5em;
+  color: var(--color-primary);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form .form-group {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #img-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #img-upload .upload-box {
+  min-width: 90%;
+  height: 90%;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  overflow: hidden;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #img-upload .upload-box:hover {
+  background: #f0f0f0;
+  color: var(--color-primary);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #img-upload .upload-box #img-preview {
+  max-width: 100%;
+  max-height: 100%;
+  display: none;
+  object-fit: fill;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #img-upload .upload-box #upload-text {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #pdf-upload {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #pdf-upload #upload-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #pdf-upload #upload-label #add-file-btn {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #pdf-upload #upload-label #add-file-btn:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.02);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #pdf-upload #upload-label #add-file-btn span {
+  font-size: 1.3rem;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #pdf-upload #upload-label #file-name {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form .input-textfields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2em;
+  padding: 0.5em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form .input-textfields .labels {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form .input-textfields .textfields {
+  height: 35px;
+  padding: 0 4px;
+  font-size: 1em;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form .input-textfields .textfields:hover {
+  box-shadow: 0 0 4px var(--color-accent);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #author-field .input-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5em;
+  box-sizing: border-box;
+  padding: 0.5em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #author-field .input-list .input-result-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #author-field .input-list .input-result-wrapper .delete-btn {
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  padding: 0.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #author-field .input-list .input-result-wrapper .delete-btn:hover {
+  transform: scale(1.05);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #author-field .input-list .input-result-wrapper .delete-btn:active {
+  transform: scale(0.95);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #date-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5em;
+  gap: 0.2em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form #date-field .labels {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form .date-picker {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-bg-light);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form .date-picker:hover {
+  border-color: var(--color-accent);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #left-form .date-picker:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(var(--accent-rgb), 0.2);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  gap: 0.5em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .form-group {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  color: var(--color-primary);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #abstract-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #abstract-field .labels {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #abstract-field .editor-toolbar {
+  display: flex;
+  gap: 0.3rem;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #abstract-field .editor-toolbar button {
+  background: #f1f1f1;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #abstract-field .editor-toolbar button:hover {
+  background: #dbeafe;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #abstract-field .editor-toolbar button.active {
+  background: #93c5fd;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #abstract-field .editor-area {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  outline: none;
+  resize: vertical;
+  overflow-y: auto;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #abstract-field .editor-area:empty::before {
+  content: attr(placeholder);
+  color: #aaa;
+  pointer-events: none;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #selection-field {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 0.5em;
+  padding: 0.5em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #selection-field .thesis-selection {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2em;
+  padding-bottom: 0.5em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #selection-field .thesis-selection:nth-child(1) {
+  border-bottom: 1px solid var(--color-border);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #selection-field .thesis-selection label {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #selection-field .thesis-selection .form-control {
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  cursor: pointer;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #selection-field .checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 6px;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form #selection-field .checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .input-textfields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2em;
+  padding: 0.5em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .input-textfields .labels {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .input-textfields .textfields {
+  height: 35px;
+  padding: 0 4px;
+  font-size: 1em;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .input-textfields .textfields:hover {
+  box-shadow: 0 0 4px var(--color-accent);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .input-list-field .input-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5em;
+  box-sizing: border-box;
+  padding: 0.5em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .input-list-field .input-list .input-result-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .input-list-field .input-list .input-result-wrapper .delete-btn {
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  padding: 0.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .input-list-field .input-list .input-result-wrapper .delete-btn:hover {
+  transform: scale(1.05);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .input-list-field .input-list .input-result-wrapper .delete-btn:active {
+  transform: scale(0.95);
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .thesis-selection {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2em;
+  padding: 0.5em;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .thesis-selection label {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form #form-body #right-form .thesis-selection .form-control {
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  cursor: pointer;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form {
+  /* For Chrome, Edge, and Safari */
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form::-webkit-scrollbar-track {
+  background: rgba(15, 20, 70, 0.3); /* subtle dark background */
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form::-webkit-scrollbar-thumb {
+  background-color: rgba(70, 90, 220, 0.8); /* your blue tone */
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+body .content-wrapper .main #main-content #pop-up #thesis-form::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(120, 140, 255, 0.9); /* brighter blue on hover */
+}
+body .content-wrapper .main #main-content #pop-up.active #thesis-form {
+  transform: scale(1);
+}
+
+/*# sourceMappingURL=archive.css.map */

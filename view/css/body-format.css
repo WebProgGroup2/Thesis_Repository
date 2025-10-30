@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+body .content-wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  position: relative;
+  overflow: auto;
+}
+body .content-wrapper .main {
+  display: grid;
+  position: relative;
+  background: url(../assets/NU_Laguna_BG.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .content-wrapper .main #header {
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/*# sourceMappingURL=body-format.css.map */
