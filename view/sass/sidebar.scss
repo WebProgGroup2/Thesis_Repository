@@ -1,0 +1,165 @@
+#side-bar {
+  background: linear-gradient(135deg, #ffd41c 0%, #ffd336 50%, #fecb32 100%);
+
+  height: 100vh;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 1em;
+  position: absolute;
+  left: 0;
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
+  }
+  .title-wrapper {
+    width: 100%;
+    display: flex;
+    padding: 0 0.5em;
+    cursor: pointer;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      aspect-ratio: 1/1;
+    }
+
+    .title-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.2s ease-out;
+      position: relative;
+
+      &:hover {
+        color: var(--color-surface);
+        transform: scale(1.02);
+
+      }
+
+      #title {
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+
+      #subtitle {
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .category-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 90%;
+      height: 2px;
+      background: black;
+      margin: 0 auto; /* centers the line */
+    }
+
+    .category-title-wrapper {
+      display: flex;
+      align-items: center;
+      padding-left: 1em;
+      gap: 0.5em;
+      font-weight: bold;
+    }
+
+    .category-carousel {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      padding: 2em 0 1em 2em;
+
+      label {
+        cursor: pointer;
+        font-size: 0.9rem;
+      }
+
+      .hidden-checkbox {
+        display: none;
+      }
+
+      .show-more {
+        color: #007bff;
+        cursor: pointer;
+        font-size: 0.9rem;
+        user-select: none;
+      }
+
+      .show-more:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .thesis-archive-wrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+
+    .thesis-archive-link {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+
+      #archive-text:hover {
+        color: #007bff;
+      }
+    }
+  }
+
+  .social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    box-sizing: border-box;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      font-weight: bold;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.5em;
+      cursor: pointer;
+
+      .img-wrapper {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.2s ease-in-out;
+
+        img {
+          height: 100%;
+          aspect-ratio: 1/1;
+        }
+
+        &:nth-child(3) {
+          width: 32px;
+          height: 32px;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

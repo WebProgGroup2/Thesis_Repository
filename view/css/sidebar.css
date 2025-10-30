@@ -1,0 +1,141 @@
+#side-bar {
+  background: linear-gradient(135deg, #ffd41c 0%, #ffd336 50%, #fecb32 100%);
+  height: 100vh;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 1em;
+  position: absolute;
+  left: 0;
+}
+#side-bar::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
+}
+#side-bar .title-wrapper {
+  width: 100%;
+  display: flex;
+  padding: 0 0.5em;
+  cursor: pointer;
+}
+#side-bar .title-wrapper .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+#side-bar .title-wrapper .title-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.2s ease-out;
+  position: relative;
+}
+#side-bar .title-wrapper .title-text:hover {
+  color: var(--color-surface);
+  transform: scale(1.02);
+}
+#side-bar .title-wrapper .title-text #title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+#side-bar .title-wrapper .title-text #subtitle {
+  font-size: 1.2em;
+}
+#side-bar .category-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+#side-bar .category-wrapper::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  background: black;
+  margin: 0 auto; /* centers the line */
+}
+#side-bar .category-wrapper .category-title-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  gap: 0.5em;
+  font-weight: bold;
+}
+#side-bar .category-wrapper .category-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 2em 0 1em 2em;
+}
+#side-bar .category-wrapper .category-carousel label {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+#side-bar .category-wrapper .category-carousel .hidden-checkbox {
+  display: none;
+}
+#side-bar .category-wrapper .category-carousel .show-more {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  user-select: none;
+}
+#side-bar .category-wrapper .category-carousel .show-more:hover {
+  text-decoration: underline;
+}
+#side-bar .thesis-archive-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+#side-bar .thesis-archive-wrapper .thesis-archive-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+#side-bar .thesis-archive-wrapper .thesis-archive-link #archive-text:hover {
+  color: #007bff;
+}
+#side-bar .social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  box-sizing: border-box;
+}
+#side-bar .social-media span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-weight: bold;
+}
+#side-bar .social-media .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  cursor: pointer;
+}
+#side-bar .social-media .icons .img-wrapper {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+#side-bar .social-media .icons .img-wrapper img {
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+#side-bar .social-media .icons .img-wrapper:nth-child(3) {
+  width: 32px;
+  height: 32px;
+}
+#side-bar .social-media .icons .img-wrapper:hover {
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=sidebar.css.map */

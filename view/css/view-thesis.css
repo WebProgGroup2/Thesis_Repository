@@ -1,0 +1,220 @@
+body .content-wrapper .main {
+  height: 200vh;
+  grid-template-rows: 80px 1fr 250px;
+  background: #fff;
+}
+body .content-wrapper .main #main-content {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 30% 1fr;
+  position: relative;
+}
+body .content-wrapper .main #main-content #upper-content {
+  display: grid;
+  grid-template-columns: 30% 1fr 10%;
+}
+body .content-wrapper .main #main-content #upper-content #initial-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+}
+body .content-wrapper .main #main-content #upper-content #initial-info #rating-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2em;
+}
+body .content-wrapper .main #main-content #upper-content #initial-info #rating-wrapper span {
+  font-size: 1.2em;
+}
+body .content-wrapper .main #main-content #upper-content #initial-info #rating-wrapper .stars-wrapper .material-symbols-outlined {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+body .content-wrapper .main #main-content #upper-content #initial-info #title-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 2.2em;
+  font-weight: 600;
+}
+body .content-wrapper .main #main-content #upper-content #initial-info #author-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 600;
+  gap: 0.5em;
+}
+body .content-wrapper .main #main-content #upper-content #initial-info #pub-date-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+}
+body .content-wrapper .main #main-content #upper-content #nav-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+body .content-wrapper .main #main-content #upper-content #nav-controls .nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  height: 30px;
+  aspect-ratio: 1/1;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+body .content-wrapper .main #main-content #upper-content #nav-controls .nav-btn:hover {
+  transform: scale(1.2);
+}
+body .content-wrapper .main #main-content #upper-content #nav-controls .nav-btn:active {
+  transform: scale(0.95);
+}
+body .content-wrapper .main #main-content #upper-content #nav-controls .number-wrapper {
+  height: 30px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 4px;
+}
+body .content-wrapper .main #main-content #lower-content {
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  width: 90%;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+  border-radius: 0 8px 0 0;
+  position: relative;
+  overflow: visible;
+}
+body .content-wrapper .main #main-content #lower-content .thesis-cover-wrapper {
+  height: 350px;
+  width: 250px;
+  position: absolute;
+  left: 2%;
+  top: 0;
+  transform: translateY(-75%);
+}
+body .content-wrapper .main #main-content #lower-content .thesis-cover-wrapper #thesis-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+body .content-wrapper .main #main-content #lower-content #left-section {
+  display: grid;
+  grid-template-rows: 15% 1fr;
+}
+body .content-wrapper .main #main-content #lower-content #left-section #upper-section {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+}
+body .content-wrapper .main #main-content #lower-content #left-section #upper-section #button-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  height: 100%;
+}
+body .content-wrapper .main #main-content #lower-content #left-section #upper-section #button-wrapper #read-thesis-btn {
+  height: 40%;
+  aspect-ratio: 2.5/1;
+  padding: 0.5em;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+body .content-wrapper .main #main-content #lower-content #left-section #upper-section #button-wrapper #read-thesis-btn:hover {
+  transform: scale(1.05);
+}
+body .content-wrapper .main #main-content #lower-content #left-section #upper-section #button-wrapper #read-thesis-btn:active {
+  transform: scale(0.95);
+}
+body .content-wrapper .main #main-content #lower-content #left-section #lower-section {
+  display: grid;
+  grid-template-rows: 40% repeat(2, 10%) 1fr;
+  padding: 1em;
+  gap: 1em;
+}
+body .content-wrapper .main #main-content #lower-content #left-section #lower-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+body .content-wrapper .main #main-content #lower-content #left-section #lower-section .wrapper .title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+body .content-wrapper .main #main-content #lower-content #left-section #lower-section .wrapper .content {
+  font-size: 1.1em;
+  text-align: justify;
+}
+body .content-wrapper .main #main-content #lower-content #right-section {
+  padding: 2em;
+  display: grid;
+  grid-template-rows: 25% 10% 1fr;
+  position: relative;
+}
+body .content-wrapper .main #main-content #lower-content #right-section .wrapper {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+body .content-wrapper .main #main-content #lower-content #right-section .wrapper .label {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+body .content-wrapper .main #main-content #lower-content #right-section .wrapper .list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+body .content-wrapper .main #main-content #lower-content #right-section #page-wrapper {
+  position: absolute;
+  height: 50px;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 5%;
+  right: 0;
+  background-color: var(--color-accent);
+  border-radius: 8px 0 0 8px;
+}
+body .content-wrapper #footer {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #1a2368 0%, #2d398a 36%, #1a2368 97%);
+}
+body .content-wrapper {
+  /* For Chrome, Edge, and Safari */
+}
+body .content-wrapper::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+body .content-wrapper::-webkit-scrollbar-track {
+  background: rgba(15, 20, 70, 0.3); /* subtle dark background */
+}
+body .content-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(70, 90, 220, 0.8); /* your blue tone */
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+body .content-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(120, 140, 255, 0.9); /* brighter blue on hover */
+}
+
+/*# sourceMappingURL=view-thesis.css.map */

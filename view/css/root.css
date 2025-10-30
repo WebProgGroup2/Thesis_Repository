@@ -1,0 +1,33 @@
+:root {
+  /* 🎨 Core Brand Colors */
+  --color-primary: #1a2068; /* Deep Indigo Blue */
+  --color-accent: #ffd32a; /* Bright Golden Yellow */
+  /* ✨ Variations (for hover or contrast) */
+  --color-primary-light: #2a33a3; /* Lighter version of indigo */
+  --color-primary-dark: #111652; /* Darker indigo for contrast */
+  --color-accent-light: #ffe36a; /* Softer yellow */
+  --color-accent-dark: #d4ad00; /* Rich gold */
+  /* 🧊 Supporting Colors */
+  --color-bg: #f9f9fc; /* Light background */
+  --color-surface: #ffffff; /* Card or panel background */
+  --color-border: #e0e3f0; /* Soft border lines */
+  --color-shadow: rgba(0, 0, 0, 0.15); /* Generic shadow color */
+  /* 🖋️ Text Colors */
+  --color-text: #1a1a1a; /* Main text */
+  --color-text-light: #666; /* Secondary text */
+  --color-text-on-primary: #ffffff; /* Text on blue areas */
+  --color-text-on-accent: #1a1a1a; /* Text on yellow areas */
+  /* 🌿 Status / Utility Colors */
+  --color-success: #2ecc71; /* Green */
+  --color-error: #e74c3c; /* Red */
+  --color-warning: #f39c12; /* Orange */
+  --color-info: #3498db; /* Light blue */
+}
+
+* {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

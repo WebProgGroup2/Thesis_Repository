@@ -1,0 +1,73 @@
+.account-wrapper {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  aspect-ratio: 2/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--color-primary);
+  padding: 0 0.5em;
+  cursor: pointer;
+
+  #account-logo {
+    font-size: 2em;
+  }
+
+  #account-owner {
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .option-wrapper {
+    padding: 1em .5em .5em .5em;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    display: none;
+    flex-direction: column;
+    gap: .5em;
+    justify-content: center;
+    align-items: center;
+    right: 5%;
+    background-color: var(--color-accent);
+    z-index: 1;
+    
+
+    .option-text {
+      width: 100%;
+      padding: .5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      border: 1px solid var(--color-primary);
+      font-weight: 600;
+
+      &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-accent);
+      }
+    }
+
+    &::before {
+      content: "";
+      height: 20px;
+      aspect-ratio: 1/1;
+      background-color: var(--color-accent);
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+}
